@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <title>Agro - Anuncios</title>
+
+    <style>
+      p.limitarQuantLinhas{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+
+  
+  </head>
+  <body> 
+      <!--Script javascript-->
+      <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--NAVBAR PRIBCIPAL-->
+    <nav class="navbar col-12 position-fixed navbar-expand-lg navbar-dark bg-dark p-3"style="z-index: 999;">
+      <div class="container-fluid col-11 m-auto">
+        <a class="navbar-brand" href="index.html">Agro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Anuncios.html">Anuncios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link di" href="#">Carrinho</a>
+            </li>
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link di" href="Noticias.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link di" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link di" href="formpost.html">Anunciar</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Busca">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav> 
+<!--FIM DA NAVBAR PRINCIPAL-->
+    <br>
+    <br>
+    
+    <br>
+    
+    <!--<img src="imagens_projeto/Agro_03.png" alt = "Agro" height="230" width="102%" class="img-fluid rounded col-13 m-auto">
+    -->
+    <!--INICIO CARROUSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner col-11 m-auto">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="imagens_projeto/Agro_03.png" alt="Primeiro Slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imagens_projeto/Organicos.png" alt="Segundo Slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imagens_projeto/Organicos.png" alt="Terceiro Slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--INICIO com a barra nav-->
+    <!--Produtos da loja-->
+    <main class="mb-5 pb-5 mb-md-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <form class="justify-content-center justify-content-md-start mb-3 mb-md-0">
+              <div class="input-group input-group-sm">
+                <!--Botão de busca-->
+                <input type="text" class="form-control" placeholder="Digíte aqui...">
+                <button class="btn btn-success">
+                  Buscar
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+          <!--Pegar este aqui-->
+          <div class="col-12 col-md-7">
+            <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
+            <form class="ml-3 d-inline-block">
+              <select class="form-select form-select-sm">
+                <option>
+                  Ordenar pelo nome
+                </option>
+                <option>Ordenar pelo menor preço</option>
+                <option>Ordenar pelo maior preço</option>
+              </select>
+            </form>
+            <nav class="d-inline-block">
+              <!--Páginas-ex: pag 1...2...3-->
+              <ul class="pagination pagination-sm my-0">
+                <li class="page-item">
+                  <button class="page-link">1</button>
+                </li>
+                <li class="page-item">
+                  <button class="page-link">2</button>
+                </li>
+                <li class="page-item disabled">
+                  <button class="page-link ">3</button>
+                </li>
+                <li class="page-item">
+                  <button class="page-link">4</button>
+                </li>
+                <li class="page-item">
+                  <button class="page-link">5</button>
+                </li>
+                <li class="page-item">
+                  <button class="page-link">6</button>
+                </li>
+              </ul>
+
+            </nav>
+
+            </div>
+
+          </div>
+
+        </div>
+        <hr class="mt-3"> 
+        <!--Inserção Dos Produtos-->
+        <div class="row g-3">
+          <!--INICIO PRODUTOS 12 produtos-->
+          <!--Div responsável pela responsividade **e inicio da adição dos cards com produtos**-->
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="verduras//carrot-3179988_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 9,60
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cenoura</h5>
+                <p class="card-text limitarQuantLinhas">Cenoura Orgânica da melhor qualidade, do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">380 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="verduras/summer-cob-sweet-agriculture-gold.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 14,99
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Milho</h5>
+                <p class="card-text limitarQuantLinhas">Milho verde da melhor qualidade, do produtor rural direto pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">400 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="verduras/autumn-72294_1280.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 12,59
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Abóbora</h5>
+                <p class="card-text limitarQuantLinhas">Abóbora Orgânica, cultivada sem uso de agrotoxícos ou adubos.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">86 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="verduras/pepper-1514030_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 4,69
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pimentão</h5>
+                <p class="card-text limitarQuantLinhas">Pimentão Orgânico produzido com a melhor qualidade, direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <!--Produto no ststus esgotado-->
+                <div >
+                  <button class="btn btn-light disabled" disabled>
+                    <small>Esgotado</small>
+                  </button>
+                </div>
+                <small class="text-danger">esgotado</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/banana-2449019_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 10,50
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Banana</h5>
+                <p class="card-text limitarQuantLinhas">Banana prata de qualidade, Orgânica.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">207 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/food-1239241_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 17,38
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Manga</h5>
+                <p class="card-text limitarQuantLinhas">Manga de qualidade cultivada na região nordeste,direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">180 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/watermelon-833198_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 5,70
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Melancia</h5>
+                <p class="card-text limitarQuantLinhas">Melancia fruta bastante refrescante que possui vitamina C, A, além de minerais.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">800 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/food-2280_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 13,00
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pera</h5>
+                <p class="card-text limitarQuantLinhas">Pera verde e fresca da melhor qualidade, direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">40 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/food-1239233_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 13,20
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Laranja</h5>
+                <p class="card-text limitarQuantLinhas">Laranja fruta citrica vitamina C Orgânica da melhor qualidade, direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">90 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/strawberry-1238295_1920.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 50,00
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Morango</h5>
+                <p class="card-text limitarQuantLinhas">Morango direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">231 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="verduras/potato-on-white-background.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 9,90
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Batata</h5>
+                <p class="card-text limitarQuantLinhas">Batata Orgânica da melhor qualidade, direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">390 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch ">
+            <!--Utilizar a classe div do tipo card do bootstrap-->
+            <!--Começo da criação do primeiro produto-->
+            <div class="card text-center bg-light">
+              <!--Adicionando o botão de gosteo o "coraçãozinho"-->
+              <a href="" class="position-absolute right-0 p-2 text-danger">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="/bi.svg#suit-heart" />
+                </svg>
+              </a><!--Fim da adição do botão gostei-->
+              <img src="frutas/grapes-fruit-isolated-on-white-background.jpg" class="card-img-top">
+              <div class="card-header">
+                R$ 14,50
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Uva</h5>
+                <p class="card-text limitarQuantLinhas">Uva Orgânica da melhor qualidade, direto do produtor rural pra sua mesa.</p>
+
+              </div>
+              <div class="card-footer">
+                <!--Teste com formulário. Testar com button depois!-->
+                <form class="d-block">
+                  <button class="btn-success">
+                    Adicionar ao Carrinho
+                  </button>
+                </form>
+                <small class="text-info">75 KG em Estoque</small>
+
+              </div>
+<!--Fim do primeiro produto-->
+            </div>
+
+          </div>
+          <hr class="mt-3">
+          <!--Estou aqui-->
+          <div class="row pb-4">
+            <div class="col-12">
+              <!--ITEMS de paginação e ordenação na parte final dos produtos ex: buscar, pag 1, 2, 3...-->
+                <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
+                <form class="ml-3 d-inline-block">
+                  <select class="form-select form-select-sm">
+                    <option>
+                      Ordenar pelo nome
+                    </option>
+                    <option>Ordenar pelo menor preço</option>
+                    <option>Ordenar pelo maior preço</option>
+                  </select>
+                </form>
+                <nav class="d-inline-block">
+                  <!--Páginas-ex: pag 1...2...3-->
+                  <ul class="pagination pagination-sm my-0">
+                    <li class="page-item">
+                      <button class="page-link">1</button>
+                    </li>
+                    <li class="page-item">
+                      <button class="page-link">2</button>
+                    </li>
+                    <li class="page-item disabled">
+                      <button class="page-link ">3</button>
+                    </li>
+                    <li class="page-item">
+                      <button class="page-link">4</button>
+                    </li>
+                    <li class="page-item">
+                      <button class="page-link">5</button>
+                    </li>
+                    <li class="page-item">
+                      <button class="page-link">6</button>
+                    </li>
+                  </ul>
+    
+                </nav>
+    
+                </div>
+
+            </div> 
+
+          </div>
+<!--FIM PRODUTOS-->
+        </div>
+
+      </div>
+    </main>
+    <!--Fim da MAIN-->
+
+      
+      <p  align="center"><font  size=+2>Descubra Nossas Categorias</font><a href="#"></a></p>
+      <br>
+<!--CARDs-->
+      <div class="card-deck col-11 m-auto g-3">
+        <div class="card mb-2">
+        <a href="">
+            <img class="card-img-top" src="imagens_projeto/tractor-3571452_1920.jpg" alt="Maquinaria agricola">
+            <div class="card-body">
+            <h5 class="card-title text-center" >Maquinaria Agrícola</h5>
+          </div>
+          </a>
+        </div>
+        <div class="card mb-2">
+            <a  href="#">
+            <img class="card-img-top" src="imagens_projeto/farm-3455131_1920.jpg" alt="Infra-estrutura">
+            <div class="card-body">
+            <h5 class="card-title text-center">Infra-estrutura rural</h5>
+          </div>
+        </a>
+        </div>
+        <div class="card mb-2">
+            <a href="#">
+            <img class="card-img-top" src="imagens_projeto/field-6288341_1920.jpg" alt="Insumos">
+            <div class="card-body">
+            <h5 class="card-title text-center">Insumos</h5>
+          </div>
+        </div>
+    </a>
+      </div>
+
+<!--FIM CARDs-->
+
+
+  <div class="card-deck col-11 m-auto">
+    <div class="card bg-dark text-white">
+      <img class="card-img" src="imagens_projeto/graos2.png" alt="Imagem do card">
+      <div class="card-img-overlay">
+        <h5 class="card-title text-dark">Sementes</h5>
+        <p class="card-text text-dark">
+          Grande número de Sementes.
+
+          Resistente ao pendoamento precoce.
+          
+          Tolerância ao "Tip Burn", ao Vírus do Mosaico da Alface (LMV) patotipo II) e ao Míldio (Bremia Lactucae)
+          
+          Ciclo de 60 a 65 dias.</p>
+        <a href="#" class="btn btn-primary ">Visitar</a>
+        
+      </div>
+    </div>
+  </div>
+
+<hr class="mt-3">
+    </body>
+      
+    <!--Rodapé-->
+    
+    <footer class="container p-5">
+      <p class="float-end"><a href="#">Voltar ao  topo</a></p>
+      <p>&copy; Agro Mercado Digital 2021–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+  </body>
+</html>

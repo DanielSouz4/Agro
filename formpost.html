@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar produto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar col-12  position-fixed navbar-expand-lg navbar-dark bg-dark p-5"style="z-index: 999;">
+        <div class="container-fluid col-11 m-auto">
+          <a class="navbar-brand" href="#">Agro</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Anuncios.html">Anuncios</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link di" href="Noticias.html">Noticias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link di" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link di" href="sub.html">Cadastro</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Busca">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <br>
+       <br>
+          <br>
+          <br>
+       <br>
+    <br>
+    
+
+    <form class="row g-3 needs-validation col-10 m-auto" novalidate>
+        <h1 class="display-3 "><font color="green">Anuncie seu produto</font></h1>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Titulo Do anuncio</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nome do Anunciante</label>
+          <input type="text" class="form-control" id="validationCustom01" value="José" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <!--<div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>-->
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Estado</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Selecione...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            **********.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Telefone</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            *********
+          </div>
+        </div>
+        <div>
+        <select class="form-select m-auto" aria-label="Default select example">
+            <option selected>Selecione a Categoria</option>
+            <option value="1">Frutas e Verduras</option>
+            <option value="2">Mudas e Sementes</option>
+            <option value="3">Materiais & insumos </option>
+            <option value="3">Maquinarios e Ferramentas </option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Imagem</label>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição do Produto</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Aceitar termos e condições.
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="Anuncios.html"><button class="btn btn-primary"  type="botton">Anunciar</button></a>
+        </div>
+      </form>
+      
+    <form class="row g-3 col-10 m-auto ">
+        
+           
+      
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
